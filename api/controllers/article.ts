@@ -7,7 +7,8 @@ import { CustomResponse, Error, } from '../types/Responses'
 const addArticle = async (req: Request, res:Response)
                       :Promise<HydratedDocument<ArticleType>|CustomResponse<Error>> => {
   try {
-    const post: HydratedDocument<ArticleType> = new Article({...req.body.post})
+    const postAdded: ArticleType = req.body.post
+    const post: HydratedDocument<ArticleType> = new Article(postAdded)
     await post.save()
     return post
   } catch {
