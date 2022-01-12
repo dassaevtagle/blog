@@ -7,6 +7,13 @@ enum ThemeColors {
 
 class ThemeState {
     public currentTheme: ThemeColors = ThemeColors.light;
+
+    public toJSON(): object {
+        return Object.getOwnPropertyNames(this).reduce((a: any, b: any) => {
+          a[b] = (this as any)[b];
+          return a;
+        }, {});
+      }
 }
 
 export const state = (): ThemeState => (
@@ -14,5 +21,5 @@ export const state = (): ThemeState => (
 )
 
 export const actions: ActionTree<ThemeState, ThemeState> = {
-    
+
 }  
