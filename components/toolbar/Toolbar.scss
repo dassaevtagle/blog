@@ -1,0 +1,7 @@
+.slide-enter-active, .slide-leave-active {
+  transform: translateX(0px);
+}
+
+.slide-enter, .slide-leave-to {
+  transform: translateX(400px);
+}
