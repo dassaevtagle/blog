@@ -1,6 +1,7 @@
 <template>
   <div>
-    <toolbar />
+    <Toolbar/>
+    <Tip-Tap />
     <Nuxt />
   </div>
 </template>

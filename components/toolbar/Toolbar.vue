@@ -23,7 +23,8 @@
         </slot>
       </Transition>
     </div>
+    <div>
+      <ColorModeButton />
+    </div>
   </div>
 </template>
-
-<script src="./Toolbar.scss" lang="scss" scoped />
