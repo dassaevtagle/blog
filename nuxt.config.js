@@ -21,6 +21,11 @@ export default {
     '@/assets/scss/main.scss'
   ],
 
+  purgeCSS: {
+    //Do not remove dark-mode class on bundling 
+    whitelist: ['dark-mode']
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
